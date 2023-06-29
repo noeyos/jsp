@@ -1,0 +1,63 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.Date"%>
+<%
+// out.print(greeting);
+// out.print(test);	// 문제발생!
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+   href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+	<!-- //////// header 시작 (menu.jsp) //////// -->
+	<%@ include file="menu.jsp" %>
+	<!-- //////// header 끝 //////// -->
+	<%!	// 선언문(전역변수)
+		String greeting = "Welcome to 이소연 World";
+		String tagline = "Welcome to 소연이 Market!";
+		
+	%>
+	<div class="jumbotron">
+		<div class="container">
+			<h1 class="display-3">
+				<%= greeting %>
+				
+			</h1>
+		</div>
+	</div>
+	<div class="container">
+		<div class="text-center">
+			<h3>
+				<%= tagline %>
+				<%
+					Date day = new Date();
+					// 지역변수 (위에서 사용X, 이 코드 아래에서만 가능)
+					String am_pm;
+					int hour = day.getHours();
+					int minute = day.getMinutes();
+					int sencond = day.getSeconds();
+					
+					if(hour/12==0){ // 0~11=>0. 정수/정수=>정수
+						am_pm = "AM";
+					} else { // 12~24=>1 또는 2
+						am_pm = "PM";
+						// 13~23시면 1~11시로 표현
+						hour = hour - 12;
+					}
+					String CT = hour + ":" + minute + ":" + second
+							+ " " + am_pm;
+				%>
+				<p>Today is <%=new Date()%></p>
+			</h3>
+		</div>
+	</div>
+	<!-- //////// footer 시작 (footer.jsp) //////// -->
+	<%@ include file="footer.jsp" %>
+	<!-- //////// footer 끝 (footer.jsp) //////// -->
+</body>
+</html>

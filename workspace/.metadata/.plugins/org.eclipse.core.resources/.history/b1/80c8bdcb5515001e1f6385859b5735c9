@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@page import="java.util.Enumeration"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Implicit Objects(내장 객체)</title>
+</head>
+<body>
+<%
+	// 모든 헤더의 이름을 가져와보자 => 리턴타입 : Enumeration(열거형)
+	Enumeration en = request.getHeaderNames();
+	// hasMoreElements() : 값이 있을때에만 반복
+	while(en.hasMoreElements()) {
+		// 현재 헤더 이름을 가져옴(Object -> String으로 downcasting)
+		String headerName = (String) en.nextElement();
+		// request.getHeader("host");
+		String headerValue = request.getHeader(headerName);
+		
+	}
+%>
+</body>
+</html>

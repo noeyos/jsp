@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.Calendar"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Implicit Object</title>
+</head>
+<body>
+	
+	<!-- 폼필드 -->
+	<form action="">
+		<!-- 폼데이터
+		필수 : mandatory
+		-->
+		<p> 아이디 : <input type="text" name="id" /></p>
+	</form>
+</body>
+</html>

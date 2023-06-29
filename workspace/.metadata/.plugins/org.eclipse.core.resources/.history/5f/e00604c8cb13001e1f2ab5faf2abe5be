@@ -1,0 +1,11 @@
+package vo;
+
+import java.io.Serializable;
+
+// 자바빈 클래스
+public class ProductVO implements Serializable {
+	// 임의의 숫자. (Serializable과 함께 생략 가능)
+	private static final long serialVersionUID = 
+			-43829741809338-1200L;
+	
+}

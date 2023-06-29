@@ -1,0 +1,11 @@
+package vo;
+
+// 자바빈 클래스(1. 멤버변수, 2. 기본생성자(생략가능), 3. getter/setter메소드)
+public class MemberVO {
+	// 멤버 변수
+	private String username;
+	private String password;
+	private String enabled;
+	// 기본 생성자
+	
+}

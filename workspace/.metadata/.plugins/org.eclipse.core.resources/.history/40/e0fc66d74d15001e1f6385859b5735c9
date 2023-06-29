@@ -1,0 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+	<!--
+	요청URL : process.jsp
+	요청파라미터 : {name=(입력한내용)}
+	-->    
+<%
+	request.setCharacterEncoding("utf-8");
+	//request 내장 객체가 {name="개똥이"} 요청 파라미터를 갖고 있음
+	String name = request.getParameter("name");	//개똥이
+%>

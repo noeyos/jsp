@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Directice Tage</title>
+</head>
+<body>
+<%
+	String memId = "이소연";
+	
+%>
+	<!-- header를 인클루드(외부 파일을 가져옴) -->
+	<%@ include file="include01_header.jsp" %>
+	<h4>------ 현재 페이지 영역 ------</h4>
+	<!-- footer를 인클루드(외부 파일을 가져옴) -->
+	<%@ include file="include01_footer.jsp?memId="+memId %>
+</body>
+</html>

@@ -1,0 +1,9 @@
+package dao;
+
+import java.util.ArrayList;
+
+import vo.BookVO;
+
+public class BookRepository {
+	ArrayList<BookVO> listOfBooks;
+}

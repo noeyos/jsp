@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@page import="java.util.Date"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+let today = new Date();
+console.log(today);
+let year = today.getFullYear();
+let month = ('0' + (today.getMoth()+1)).slice(-2);
+let day = ('0' + today.getDate()).slice(-2);
+let dasteString = year + "-" + month + "-" + day;
+console.log("dateString : " + dateString)''
+</script>
+</head>
+<body>
+<%	// 스크립틀릿
+	// 1초마다 새로고침
+	// response.setIntHeader("Refresh", 1);
+%>
+<!-- new Date() => Wed Jun 28 12:11:35 KST 2023 -->
+<p><%= new Date().toLocaleString() %></p>
+
+</body>
+</html>
