@@ -1,6 +1,0 @@
-package vo;
-
-// 자바빈 클래스
-public class MemberVO {
-
-}

@@ -1,0 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<title>상품 등록</title>
+</head>
+<body>
+	<!-- header.jsp -->
+	<jsp:include page="menu.jsp" />
+	
+	<!-- 상품 등록 시작 -->
+	<div class="jumbotron">
+		<!-- container : 이 안에 내용있다 -->
+		<div class="container">
+			<h1 class="display-3">상품 등록</h1>
+		</div>
+	</div>
+	
+	<!-- 상품 등록 폼 필드 시작 -->
+	<div class="container">
+		<!-- 폼 필드 -->
+		<form name="newProduct" action="processAddProduct.jsp"
+			class="form-horizontal" method="post">
+			<div class="form-group row">
+				
+			</div>
+		</form>
+	</div>
+	<!-- 상품 등록 폼 필드 끝 -->
+	
+	<!-- footer.jsp -->
+	<jsp:include page="footer.jsp" />
+</body>
+</html>

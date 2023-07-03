@@ -32,11 +32,14 @@ scope객체	: pageContext /request  		  / session			   /application
 <!-- body시작 -->
 <div class="jumbotron">
 	<div class="container">
-		<h1 class="display-3">상품목록</h1>
+		<h1 class="display-3">상품 목록</h1>
 	</div>
 </div>
 <div class="container">
 	<!-- 행 별 처리 -->
+	<div class="row" style="justify-content: right; margin:0 0 30px 0;">
+		<a href="addProduct.jsp" class="btn btn-primary">상품 추가</a>
+	</div>		
 	<div class="row" align="center">
 		<c:forEach var="product" items="${listOfProducts}" varStatus="stat">
 			<div class="col-md-4"><!-- 열 별 처리 -->
