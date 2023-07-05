@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Validation</title>
+</head>
+<body>
+<!-- body와 body 사이를 document라고 함 -->
+	<form name="loginForm" action="validation03_process.jsp" method="post">
+		<p>이름: <input type="text" name="name"></p>
+		<!-- checkform(): 핸들러함수   -->
+		<p><input type="button" value="전송" onclick="checkForm()"></p>
+	</form>
+<script>
+	function checkForm() {
+		let form = document.loginForm;
+		// 1) 아이디는 영문 소문자만 입력 가능
+		// form.id.value : admin (legnth:5)
+		// 2) 비밀번호는 숫자만 입력 가능
+	}
+</script>
+</body>
+</html>

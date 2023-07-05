@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Validation</title>
+</head>
+<body>
+<!-- body와 body 사이를 document라고 함 -->
+	<form name="frm">
+		<p>이름: <input type="text" name="name"></p>
+		<!-- checkform(): 핸들러함수   -->
+		<p><input type="button" value="전송" onclick="checkForm()"></p>
+	</form>
+<script>
+	function checkForm() {
+		//1admin
+		//33개똥이
+		//It is Not a Number : 그것은 숫자가 아니다(isNaN)
+		let form = document.frm;
+		if(form.name.value)
+	}
+</script>
+</body>
+</html>

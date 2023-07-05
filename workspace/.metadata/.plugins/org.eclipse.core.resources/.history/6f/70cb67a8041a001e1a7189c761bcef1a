@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ page import="org.apache.commons.fileupload.DiskFileUpload"%>
+<%@ page import="java.util.List"%>
+<%@ page import="java.util.Iterator"%>
+<%	// 스크립틀릿
+	// 폼 페이지에서 전송된 파일을 저장할 서버의 경로를 작성
+	String path = "c:\\upload";
+	// Commons-Fileupload.jar를 이용
+	// 해당 패키지에 포함되어있음
+	DiskFileUpload upload = new DiskFileUpload();
+	// 업로드 환경설정
+	upload.setSizeMax(10000000);	// 업로드 가능 최대 크기(bytes)
+	upload.setSizeThreshold(4096);	// 메모리상에 저장할 최대 크기(bytes)
+	upload.setRepositoryPath(path);	// 업로드될 파일을 임시로 저장할 경로
+	// 폼 페이지에서 전송된 multipart/form 유형의 요청 파라미터 -> parseRequest()메소드로 전달받음
+	List items = upload.parseRequest(request);
+	// Iterator 클래스로 변환
+	Iterator params = items.iterator();
+	// 폼 페이지에서 전송된 요청 파라미터가 없을 때까지 반복
+	while(params.hasNext()) {
+		
+	}
+%>
