@@ -1,0 +1,6 @@
+package vo;
+
+// VO : Value Object / DTO : Data Trasport Object
+public class UsersVO {
+	
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>JSPBook</display-name>
+  <!-- 시큐리티 역할(role) 설정 -->
+  <security-role>
+  	<role-name>tomcat</role-name>
+  </security-role>
+  <security-role>
+  	<role-name>role1</role-name>
+  </security-role>
+  <!-- 시큐리티의 제약 사항(constraint)을 설정 -->
+  <!-- JSPBook이라는 웹 애플리케이션에서 해당 url로 get방식으로 요청하려면
+  		role1이라는 권한이 있어야 함(both, role1 아이디) -->
+  <security-constraint>
+  	<web-resource-collection>
+  		<web-resource-name>JSPBook</web-resource-name>
+  		<url-pattern>/ch10/security01.jsp</url-pattern>
+  		<http-method>GET</http-method>
+  	</web-resource-collection>
+  	<auth-constraint>
+  		<description></description>
+  		<role-name>role1</role-name>
+  	</auth-constraint>
+  </security-constraint>
+  <!-- 인증(authentication) - 로그인/로그아웃 처리를 위한 페이지를 설정 -->
+  <login-config>
+  	<!-- <auth-method>BASIC</auth-method> -->
+  	<auth-method>FORM</auth-method>
+  	<!-- 폼으로 로그인할 때 환경 설정 -->
+  	<form-login-config>
+  	
+  	</form-login-config>
+  </login-config>
+</web-app>

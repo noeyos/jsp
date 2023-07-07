@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +11,8 @@
 <!-- WYSIWYG(What You See Is What You Get) -->
 <script src="/ckeditor/ckeditor.js"></script>
 <script src="/js/jquery-3.6.0.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="/js/validation.js"></script>
 <script>
 // document내 요소 모두 로딩 후 처리
 $(function(){
@@ -47,6 +52,16 @@ $(function(){
 </script>
 </head>
 <body>
+	<!-- /addProduct.jsp?language=en -->
+	<%-- <fmt:setLocale value='<%=request.getParameter("language") %>'/> --%>
+	<!-- <fmt:setLocale value='${param.language}'/> -->
+	<!-- param language -->
+	<fmt:setLocale value='${param.language}'/>
+	<!--
+		bundle : bundle 패키지
+		message : message.property
+	-->
+	<fmt:bundle basename="bundle.message">
 	<!-- header.jsp -->
 	<jsp:include page="menu.jsp" />
 	
@@ -54,12 +69,16 @@ $(function(){
 	<div class="jumbotron">
 		<!-- container : 이 안에 내용있다 -->
 		<div class="container">
-			<h1 class="display-3">상품 등록</h1>
+			<h1 class="display-3"><fmt:message key="title"/></h1>
 		</div>
 	</div>
 	
 	<!-- 상품 등록 폼 필드 시작 -->
 	<div class="container">
+		<div class="text-right">
+			<!-- ?language=ko => addProduct.jsp?language=ko -->
+			<a href="?language=ko">Korean</a>|<a href="?language=en">English</a>
+		</div>
 		<!-- 폼 필드
 		요청URL : processAddProduct.jsp
 		요청방식 : post
@@ -71,61 +90,61 @@ $(function(){
 		<form name="newProduct" action="processAddProduct.jsp"
 			class="form-horizontal" method="post" enctype="multipart/form-data">
 			<div class="form-group row">
-				<label class="col-sm-2">상품 코드</label>
+				<label class="col-sm-2"><fmt:message key="productId"/></label>
 				<div class="col-sm-3">
 					<input type="text" name="productId" class="form-control" required>
 				</div>
 			</div>
 			<div class="form-group row">
-				<label class="col-sm-2">상품명</label>
+				<label class="col-sm-2"><fmt:message key="pname"/></label>
 				<div class="col-sm-3">
 					<input type="text" name="pname" class="form-control" required>
 				</div>
 			</div>
 			<div class="form-group row">
-				<label class="col-sm-2">가격</label>
+				<label class="col-sm-2"><fmt:message key="unitPrice"/></label>
 				<div class="col-sm-3">
-					<input type="text" name="unitPrice" class="form-control" required>
+					<input type="number" name="unitPrice" class="form-control" required>
 				</div>
 			</div>
 			<div class="form-group row">
-				<label class="col-sm-2">상세 정보</label>
+				<label class="col-sm-2"><fmt:message key="description"/></label>
 				<div class="col-sm-3">
 					<textarea name="description" rows="3" cols="50" class="form-control"></textarea>
 				</div>
 			</div>
 			<div class="form-group row">
-				<label class="col-sm-2">제조사</label>
+				<label class="col-sm-2"><fmt:message key="manufacturer"/></label>
 				<div class="col-sm-3">
 					<input type="text" name="manufacturer" class="form-control">
 				</div>
 			</div>
 			<div class="form-group row">
-				<label class="col-sm-2">분류</label>
+				<label class="col-sm-2"><fmt:message key="category"/></label>
 				<div class="col-sm-3">
 					<input type="text" name="category" class="form-control">
 				</div>
 			</div>
 			<div class="form-group row">
-				<label class="col-sm-2">재고 수</label>
+				<label class="col-sm-2"><fmt:message key="unitsInStock"/></label>
 				<div class="col-sm-3">
-					<input type="text" name="unitsInStock" class="form-control">
+					<input type="number" name="unitsInStock" class="form-control">
 				</div>
 			</div>
 			<div class="form-group row">
-				<label class="col-sm-2">상태</label>
+				<label class="col-sm-2"><fmt:message key="condition"/></label>
 				<div class="col-sm-5">
 					<input type="radio" id="condition1" name="condition" value="New" />
-						<label for="condition1">신규 제품</label>
+						<label for="condition1"><fmt:message key="condition_New"/></label>
 					<input type="radio" id="condition2" name="condition" value="Old" />
-						<label for="condition2">중고 제품</label>
+						<label for="condition2"><fmt:message key="condition_Old"/></label>
 					<input type="radio" id="condition3" name="condition" value="Refurbished" />
-						<label for="condition3">재생 제품</label>
+						<label for="condition3"><fmt:message key="condition_Refurbished"/></label>
 				</div>
 			</div>
 			<!-- 상품 이미지 -->
 			<div class="form-group row">
-				<label class="col-sm-2">상품 이미지</label>
+				<label class="col-sm-2"><fmt:message key="productImage"/></label>
 				<div class="col-sm-5">
 					<input type="file" id="productImage"
 						name="productImage" class="form-control" />
@@ -133,12 +152,13 @@ $(function(){
 			</div>
 			<!-- 상품 이미지 미리보기 -->
 			<div class="form-group row">
-				<label class="col-sm-2">이미지 미리보기</label>
+				<label class="col-sm-2"><fmt:message key="productPreImage"/></label>
 				<div class="col-sm-5 divImg"></div>
 			</div>
 			<div class="form-group row">
 				<div class="col-sm-offset-2 col-sm-10">
-					<input type="submit" class="btn btn-primary" value="등록">
+					<input type="button" class="btn btn-primary" value="<fmt:message key="button"/>"
+						onclick="CheckAddProduct()">
 				</div>
 			</div>
 		</form>
@@ -147,6 +167,7 @@ $(function(){
 	
 	<!-- footer.jsp -->
 	<jsp:include page="footer.jsp" />
+	</fmt:bundle>
 <script>
 CKEDITOR.replace("description");
 </script>

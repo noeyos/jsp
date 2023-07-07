@@ -1,0 +1,13 @@
+package vo;
+
+// VO : Value Object / DTO : Data Trasport Object
+// 자바빈 클래스(멤버변수, 기본생성자, getter/setter메소드)
+public class UsersVO {
+	id;
+	passwd;
+	phone1;
+	phone2;
+	phone3;
+	email;
+	
+}

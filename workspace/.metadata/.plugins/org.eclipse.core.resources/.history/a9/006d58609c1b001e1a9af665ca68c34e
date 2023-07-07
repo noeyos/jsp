@@ -1,0 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<!--
+요청URL : validation-5+process.jsp
+요청파라미터 : {id=a001, passwd=1234, name=개똥이, phone1=010, phone2=1234, phone3=1234,
+email=test@test.co.kr}
+요청방식 : post
+-->
+<%
+
+
+%>
