@@ -1,0 +1,23 @@
+<%@page import="java.util.Enumeration"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Session</title>
+</head>
+<body>
+	<!-- 
+		session01.jsp와 session01_process02.jsp를 먼저 수행 후
+		session.setAttribute("userId", "admin")
+		session.setAttribute("userPw", "java")
+	-->
+	<h4>세션 삭제 전</h4>
+	<%	
+		String userId = (String)session.getAttribute("usreId"); //admin
+		String userPw = (String)session.getAttribute("userPw"); //java
+		out.print("설정된 세션 이름 userId의 값 : " + userId);
+		out.print("설정된 세션 이름 userPw의 값 : " + userPw);
+	%>
+	
+</body>
+</html>

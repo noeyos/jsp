@@ -1,3 +1,4 @@
+USE_COLORED_LABELS=false
 USE_ROUND_TABS=true
 eclipse.preferences.version=1
 showIntro=false

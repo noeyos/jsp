@@ -1,0 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%	// 스크립틀릿
+	// FORM 인증 형식을 통해 로그인 처리 시 session에 로긍니 정보가 들어있음
+	// session 객체 : session scope
+	session.invalidate();
+	response.sendRedirect("addProduct.jsp");
+
+
+%>

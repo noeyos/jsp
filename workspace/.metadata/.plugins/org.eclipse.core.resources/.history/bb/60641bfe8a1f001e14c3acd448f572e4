@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ page isErrorPage="true" %>
+<!-- isErrorPage 속성 : 현재 jsp 페이지를 오류 페이지로 호출하는
+page 디렉티브 태그의 속성 -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exception</title>
+</head>
+<body>
+	<p>오류가 발생했습니다</p>
+	<p>예외 유형 : <%= exception.toString() %></p>
+</body>
+</html>

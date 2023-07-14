@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%
+	// form : product.jsp
+	// to   : post방식으로 addCart.jsp?productId=P1234
+	String productId = request.getParameter("productId");	//P1234
+	
+	out.print("productId : " + productId);
+	
+	// trim() : 공백제거
+	// addCart.jsp
+	if(productId == null || productId.trim().equals("")) {
+		
+	}
+%>

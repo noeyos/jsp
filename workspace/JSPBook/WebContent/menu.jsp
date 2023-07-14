@@ -5,6 +5,7 @@
 	<div class="container">
 		<div class="navhar-header">
 			<a class="navbar-brand" href="./welcome.jsp">Home</a>
+			<a class="navbar-brand" href="./products.jsp">Prod</a>
 		</div>
 	</div>
 </nav>

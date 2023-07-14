@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exception</title>
+</head>
+<body>
+	<!--
+	POST 방식
+	요청URL : exception_process.jsp
+	요청파라미터 : {num1=12&num2=6}
+	
+	GET방식
+	요청URL : exception_process.jsp?num1=12&num2=6
+	-->
+	<form action="exception_process.jsp" method="post">
+		
+	
+	</form>
+</body>
+</html>
