@@ -11085,3 +11085,199 @@ org.eclipse.wst.xml.core.internal.document.StructuredDocumentRegionManagementExc
 
 !ENTRY org.eclipse.wst.html.ui 1 1 2023-07-14 12:39:36.307
 !MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+!SESSION 2023-07-24 11:45:25.558 -----------------------------------------------
+eclipse.buildId=4.16.0.I20200604-0540
+java.version=1.8.0_202
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.lsp4e 4 0 2023-07-24 11:45:28.105
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.lsp4e [574]
+  Unresolved requirement: Require-Bundle: org.eclipse.lsp4j; bundle-version="[0.9.0,0.10.0)"
+    -> Bundle-SymbolicName: org.eclipse.lsp4j; bundle-version="0.9.0.v20200229-1009"
+       org.eclipse.lsp4j [576]
+         Unresolved requirement: Import-Package: org.eclipse.xtext.xbase.lib; version="[2.19.0,3.0.0)"
+           -> Export-Package: org.eclipse.xtext.xbase.lib; bundle-symbolic-name="org.eclipse.xtext.xbase.lib"; bundle-version="2.31.0.v20230529-0659"; version="2.31.0.v20230529-0659"
+              org.eclipse.xtext.xbase.lib [1005]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Import-Package: org.eclipse.xtext.xbase.lib.util; version="[2.19.0,3.0.0)"
+           -> Export-Package: org.eclipse.xtext.xbase.lib.util; bundle-symbolic-name="org.eclipse.xtext.xbase.lib"; bundle-version="2.31.0.v20230529-0659"; version="2.31.0.v20230529-0659"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.lsp4e.debug 4 0 2023-07-24 11:45:28.107
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.lsp4e.debug [575]
+  Unresolved requirement: Require-Bundle: org.eclipse.lsp4j.debug; bundle-version="[0.9.0,0.10.0)"
+    -> Bundle-SymbolicName: org.eclipse.lsp4j.debug; bundle-version="0.9.0.v20200229-1009"
+       org.eclipse.lsp4j.debug [577]
+         Unresolved requirement: Import-Package: org.eclipse.xtext.xbase.lib; version="[2.19.0,3.0.0)"
+           -> Export-Package: org.eclipse.xtext.xbase.lib; bundle-symbolic-name="org.eclipse.xtext.xbase.lib"; bundle-version="2.31.0.v20230529-0659"; version="2.31.0.v20230529-0659"
+              org.eclipse.xtext.xbase.lib [1005]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Import-Package: org.eclipse.xtext.xbase.lib.util; version="[2.19.0,3.0.0)"
+           -> Export-Package: org.eclipse.xtext.xbase.lib.util; bundle-symbolic-name="org.eclipse.xtext.xbase.lib"; bundle-version="2.31.0.v20230529-0659"; version="2.31.0.v20230529-0659"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.wildwebdeveloper 4 0 2023-07-24 11:45:28.637
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wildwebdeveloper [795]
+  Unresolved requirement: Require-Bundle: org.eclipse.lsp4e; bundle-version="0.5.0"
+    -> Bundle-SymbolicName: org.eclipse.lsp4e; bundle-version="0.13.2.202006041453"; singleton:="true"
+       org.eclipse.lsp4e [574]
+         Unresolved requirement: Require-Bundle: org.eclipse.lsp4j; bundle-version="[0.9.0,0.10.0)"
+           -> Bundle-SymbolicName: org.eclipse.lsp4j; bundle-version="0.9.0.v20200229-1009"
+              org.eclipse.lsp4j [576]
+                Unresolved requirement: Import-Package: org.eclipse.xtext.xbase.lib; version="[2.19.0,3.0.0)"
+                  -> Export-Package: org.eclipse.xtext.xbase.lib; bundle-symbolic-name="org.eclipse.xtext.xbase.lib"; bundle-version="2.31.0.v20230529-0659"; version="2.31.0.v20230529-0659"
+                     org.eclipse.xtext.xbase.lib [1005]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+                Unresolved requirement: Import-Package: org.eclipse.xtext.xbase.lib.util; version="[2.19.0,3.0.0)"
+                  -> Export-Package: org.eclipse.xtext.xbase.lib.util; bundle-symbolic-name="org.eclipse.xtext.xbase.lib"; bundle-version="2.31.0.v20230529-0659"; version="2.31.0.v20230529-0659"
+  Unresolved requirement: Require-Bundle: org.eclipse.lsp4j; bundle-version="0.5.0"
+    -> Bundle-SymbolicName: org.eclipse.lsp4j; bundle-version="0.9.0.v20200229-1009"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 4 0 2023-07-24 11:45:28.640
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wildwebdeveloper.xml [796]
+  Unresolved requirement: Require-Bundle: org.eclipse.lsp4j; bundle-version="0.9.0"
+    -> Bundle-SymbolicName: org.eclipse.lsp4j; bundle-version="0.9.0.v20200229-1009"
+       org.eclipse.lsp4j [576]
+         Unresolved requirement: Import-Package: org.eclipse.xtext.xbase.lib; version="[2.19.0,3.0.0)"
+           -> Export-Package: org.eclipse.xtext.xbase.lib; bundle-symbolic-name="org.eclipse.xtext.xbase.lib"; bundle-version="2.31.0.v20230529-0659"; version="2.31.0.v20230529-0659"
+              org.eclipse.xtext.xbase.lib [1005]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Import-Package: org.eclipse.xtext.xbase.lib.util; version="[2.19.0,3.0.0)"
+           -> Export-Package: org.eclipse.xtext.xbase.lib.util; bundle-symbolic-name="org.eclipse.xtext.xbase.lib"; bundle-version="2.31.0.v20230529-0659"; version="2.31.0.v20230529-0659"
+  Unresolved requirement: Require-Bundle: org.eclipse.lsp4e; bundle-version="0.5.0"
+    -> Bundle-SymbolicName: org.eclipse.lsp4e; bundle-version="0.13.2.202006041453"; singleton:="true"
+       org.eclipse.lsp4e [574]
+         Unresolved requirement: Require-Bundle: org.eclipse.lsp4j; bundle-version="[0.9.0,0.10.0)"
+           -> Bundle-SymbolicName: org.eclipse.lsp4j; bundle-version="0.9.0.v20200229-1009"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY net.jeeeyul.eclipse.themes 4 0 2023-07-24 11:45:28.647
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: net.jeeeyul.eclipse.themes [965]
+  Unresolved requirement: Require-Bundle: org.eclipse.xtend.lib; bundle-version="2.11.0"
+    -> Bundle-SymbolicName: org.eclipse.xtend.lib; bundle-version="2.31.0.v20230529-0659"
+       org.eclipse.xtend.lib [1003]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.eclipse.xtend.lib.macro; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.xtend.lib.macro; bundle-version="2.31.0.v20230529-0659"
+              org.eclipse.xtend.lib.macro [1004]
+                Unresolved requirement: Require-Bundle: org.eclipse.xtext.xbase.lib; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.eclipse.xtext.xbase.lib; bundle-version="2.31.0.v20230529-0659"
+                     org.eclipse.xtext.xbase.lib [1005]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.eclipse.xtext.xbase.lib; bundle-version="2.31.0"; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.xtext.xbase.lib; bundle-version="2.31.0.v20230529-0659"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY net.jeeeyul.eclipse.themes.ui 4 0 2023-07-24 11:45:28.653
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: net.jeeeyul.eclipse.themes.ui [966]
+  Unresolved requirement: Require-Bundle: org.eclipse.xtend.lib; bundle-version="2.11.0"
+    -> Bundle-SymbolicName: org.eclipse.xtend.lib; bundle-version="2.31.0.v20230529-0659"
+       org.eclipse.xtend.lib [1003]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.eclipse.xtend.lib.macro; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.xtend.lib.macro; bundle-version="2.31.0.v20230529-0659"
+              org.eclipse.xtend.lib.macro [1004]
+                Unresolved requirement: Require-Bundle: org.eclipse.xtext.xbase.lib; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.eclipse.xtext.xbase.lib; bundle-version="2.31.0.v20230529-0659"
+                     org.eclipse.xtext.xbase.lib [1005]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.eclipse.xtext.xbase.lib; bundle-version="2.31.0"; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.xtext.xbase.lib; bundle-version="2.31.0.v20230529-0659"
+  Unresolved requirement: Require-Bundle: net.jeeeyul.eclipse.themes; bundle-version="2.3.23"
+    -> Bundle-SymbolicName: net.jeeeyul.eclipse.themes; bundle-version="2.3.23.I20230324-104319"; singleton:="true"
+       net.jeeeyul.eclipse.themes [965]
+         Unresolved requirement: Require-Bundle: org.eclipse.xtend.lib; bundle-version="2.11.0"
+           -> Bundle-SymbolicName: org.eclipse.xtend.lib; bundle-version="2.31.0.v20230529-0659"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2023-07-24 11:45:40.901
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2023-07-24 11:45:40.903
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2023-07-24 11:45:40.906
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-07-24 11:45:41.994
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\PC-07'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
